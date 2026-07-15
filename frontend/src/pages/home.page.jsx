@@ -20,16 +20,16 @@ const HomePage = () => {
   let [pageState, setPageState] = useState("home")
 
   let categories = [
+    "Technology",
+    "Personal Growth",
     "Artificial Intelligence",
-    "Machine Learning",
+    "Travel & Adventure",
     "Web Development",
+    "Health & Wellness",
     "Startups",
-    "FinTech",
-    "Data Science",
-    "Cyber Security",
-    "UI/UX Design",
-    "Productivity",
-    "Open Source"
+    "Finance",
+    "Creative Arts",
+    "Productivity"
   ];
 
 
