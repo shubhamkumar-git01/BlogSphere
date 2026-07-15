@@ -65,7 +65,7 @@ const generateUploadURL = async () => {
   const imageName = `${nanoid()}-${date.getTime()}.jpeg`
 
   return await s3.getSignedUrlPromise('putObject', {
-    Bucket: 'thynk-photos',
+    Bucket: process.env.AWS_BUCKET_NAME,
     Key: imageName,
     Expires: 1000,
     ContentType: "image/jpeg"
