@@ -117,8 +117,11 @@ const HomePage = () => {
     <AnimationWrapper>
       {/* Hero Section */}
       <section className="w-full bg-grey dark:bg-black py-20 px-4 md:px-[10vw] flex flex-col md:flex-row items-center gap-10 rounded-b-3xl shadow-premium dark:shadow-premium-dark relative overflow-hidden transition-colors duration-300">
-        <div className="absolute inset-0 opacity-10 dark:opacity-20 bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-fixed bg-center"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-fixed bg-center opacity-20 dark:opacity-40"></div>
+        {/* Dark overlay specifically to make white text pop in dark mode */}
+        <div className="absolute inset-0 bg-transparent dark:bg-black/60 pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple/20 dark:bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+        
         <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -131,13 +134,13 @@ const HomePage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-6xl font-bold text-black dark:text-white leading-tight mb-6 transition-colors"
           >
-            Discover the <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple to-blue-500 dark:from-accent dark:to-purple">Future</span> of Blogging
+            Discover the <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-blue-700 dark:from-accent dark:to-purple font-extrabold">Future</span> of Blogging
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-dark-grey dark:text-text-light mb-8 max-w-xl mx-auto md:mx-0 transition-colors"
+            className="text-xl text-dark-grey dark:text-text-light mb-8 max-w-xl mx-auto md:mx-0 transition-colors drop-shadow-sm dark:drop-shadow-md"
           >
             Dive into premium content spanning tech, finance, lifestyle, and more. Written by experts, crafted for you.
           </motion.p>
@@ -259,45 +262,48 @@ const HomePage = () => {
           <p className="text-xl text-dark-grey dark:text-text-light max-w-2xl mx-auto">Experience the ultimate platform for creators and thinkers.</p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 perspective-1000">
           {[
-            { icon: "ri-quill-pen-line", title: "Premium Editor", desc: "A distraction-free, rich text editor that makes writing a joy." },
-            { icon: "ri-global-line", title: "Global Reach", desc: "Connect with a diverse audience of millions worldwide." },
-            { icon: "ri-bar-chart-box-line", title: "Detailed Analytics", desc: "Track your blog's performance with beautiful insights." }
+            { icon: "ri-quill-pen-line", title: "Premium Editor", desc: "A distraction-free, rich text editor that makes writing a joy. Fully equipped with tools." },
+            { icon: "ri-global-line", title: "Global Reach", desc: "Connect with a diverse audience of millions worldwide. Your voice deserves to be heard." },
+            { icon: "ri-bar-chart-box-line", title: "Detailed Analytics", desc: "Track your blog's performance with beautiful insights and deep audience engagement metrics." }
           ].map((feature, i) => (
             <motion.div 
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.2 }}
-              className="p-8 rounded-2xl bg-grey dark:bg-dark-card hover:shadow-xl dark:hover:shadow-premium-dark transition-all hover:-translate-y-2 border border-transparent hover:border-black/10 dark:hover:border-white/10"
+              transition={{ duration: 0.7, delay: i * 0.2 }}
+              whileHover={{ scale: 1.05, rotateY: 5, rotateX: 5, z: 50 }}
+              className="p-8 rounded-2xl bg-grey dark:bg-dark-card shadow-lg hover:shadow-2xl dark:shadow-black/50 transition-all border border-transparent hover:border-purple/20 dark:hover:border-accent/20 cursor-pointer transform-style-3d"
             >
-              <div className="w-16 h-16 rounded-full bg-white dark:bg-dark-bg flex items-center justify-center text-3xl mb-6 shadow-sm dark:text-accent">
+              <div className="w-16 h-16 rounded-full bg-white dark:bg-dark-bg flex items-center justify-center text-3xl mb-6 shadow-md dark:text-accent group-hover:scale-110 transition-transform">
                 <i className={feature.icon}></i>
               </div>
               <h3 className="text-2xl font-bold mb-3 dark:text-white">{feature.title}</h3>
-              <p className="text-dark-grey dark:text-text-light">{feature.desc}</p>
+              <p className="text-dark-grey dark:text-text-light leading-relaxed">{feature.desc}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* Inspirational Quotes Section */}
-      <section className="py-16 px-4 md:px-[10vw] bg-grey dark:bg-black transition-colors duration-300 border-y border-black/5 dark:border-white/5 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03] dark:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none"></div>
+      <section className="py-20 px-4 md:px-[10vw] bg-grey dark:bg-black transition-colors duration-300 border-y border-black/5 dark:border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.05] dark:opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none mix-blend-screen"></div>
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl pointer-events-none mix-blend-screen"></div>
         <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.90 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, type: "spring" }}
-          className="max-w-4xl mx-auto text-center relative z-10"
+          transition={{ duration: 1, type: "spring", bounce: 0.4 }}
+          className="max-w-4xl mx-auto text-center relative z-10 p-10 bg-white/50 dark:bg-dark-card/50 backdrop-blur-md rounded-3xl shadow-xl border border-white/20 dark:border-dark-grey/50"
         >
-          <i className="ri-double-quotes-l text-6xl text-purple/20 dark:text-accent/20 absolute -top-8 -left-4 md:-left-12"></i>
-          <h2 className="text-3xl md:text-5xl font-gelasio font-bold leading-relaxed dark:text-white italic">
+          <i className="ri-double-quotes-l text-7xl text-purple/30 dark:text-accent/30 absolute -top-6 -left-6 md:-left-10 drop-shadow-md"></i>
+          <h2 className="text-3xl md:text-5xl font-gelasio font-bold leading-relaxed text-black dark:text-white italic">
             "The art of writing is the art of discovering what you believe."
           </h2>
-          <p className="mt-6 text-xl text-dark-grey dark:text-text-light font-medium">— Gustave Flaubert</p>
+          <p className="mt-8 text-xl text-dark-grey dark:text-accent font-semibold tracking-wider uppercase">— Gustave Flaubert</p>
         </motion.div>
       </section>
 

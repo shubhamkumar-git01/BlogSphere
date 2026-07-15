@@ -22,12 +22,12 @@ const AboutDeveloper = () => {
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ delay: 0.3, type: "spring", stiffness: 150 }}
-                            className="w-40 h-40 bg-white dark:bg-dark-card p-2 rounded-full shadow-lg"
+                            className="w-44 h-44 bg-white dark:bg-dark-card p-2 rounded-full shadow-lg"
                         >
                             <img 
                                 src="/profile.jpg" 
                                 alt="Shubham Kumar" 
-                                className="w-full h-full rounded-full bg-grey dark:bg-black object-cover object-top"
+                                className="w-full h-full rounded-full bg-grey dark:bg-black object-cover object-center"
                             />
                         </motion.div>
 

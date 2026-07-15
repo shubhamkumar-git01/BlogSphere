@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import { Search, Sun, Moon, NotebookPen } from "lucide-react";
+import { Search, Sun, Moon, NotebookPen, Globe } from "lucide-react";
 import { UserContext } from "../App";
 import UserNavigationPanel from './user-navigation.component';
 import { ThemeContext } from '../common/ThemeContext';
@@ -39,8 +39,11 @@ const Navbar = () => {
   return (
     <>
       <nav className='navbar dark:bg-dark-bg transition-colors duration-300 shadow-premium dark:shadow-premium-dark z-50'>
-        <Link to="/" className='flex-none w-14'>
-          <img src="/logo-classic.jpg" className='w-full rounded-full border-2 border-transparent hover:border-purple dark:hover:border-accent transition-all duration-300 shadow-md' alt="BlogSphere Logo" />
+        <Link to="/" className='flex-none flex items-center gap-2 group'>
+          <div className="w-10 h-10 rounded-xl bg-purple dark:bg-accent flex items-center justify-center text-white dark:text-black shadow-lg shadow-purple/20 dark:shadow-accent/20 transition-transform group-hover:scale-105 group-hover:-rotate-3 duration-300">
+            <Globe size={24} strokeWidth={2.5} />
+          </div>
+          <span className="text-2xl font-bold font-gelasio hidden md:block dark:text-white group-hover:text-purple dark:group-hover:text-accent transition-colors">BlogSphere</span>
         </Link>
 
         <div className={'absolute bg-white dark:bg-dark-bg w-full left-0 top-full mt-0 border-b border-grey dark:border-dark-card py-4 px-[5vw] md:border-0 md:block md:relative md:inset-0 md:p-0 md:w-auto md:show ' + (searchBoxVisibility ? "show" : "hide")}>

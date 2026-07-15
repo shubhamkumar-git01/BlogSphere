@@ -34,12 +34,12 @@ Featuring a custom-built rich text editor, secure JWT & Google Firebase authenti
 
 ## ✨ Core Features
 
-- **🌓 Global Dark Mode**: A stunning, ultra-premium Dark Mode architecture that seamlessly transitions the entire UI, persisted via local storage.
-- **🔐 Secure Authentication**: Full JWT-based user auth system paired with **Google Auth (Firebase)** integration for 1-click social logins.
-- **📝 Rich Text Editor**: A deeply integrated, block-style editor allowing users to format text, add headers, quotes, lists, and embed images.
-- **🖼️ Image Uploads**: Secure image hosting and management via AWS S3 integration.
-- **📱 Responsive UI/UX**: A 100% mobile-first design built with Tailwind CSS, ensuring perfect readability on any device.
-- **✨ Cinematic Animations**: Smooth page transitions, staggered list reveals, and interactive hover states using Framer Motion.
+- **True Dark Mode:** A stunning, default dark mode for an immersive premium reading experience.
+- **3D Interactive Animations:** Powered by **Framer Motion**, cards and elements feature 3D tilt effects, parallax scrolling, and dynamic scaling.
+- **Rich Text Editor:** Clean, distraction-free markdown-like editor for authors.
+- **Secure Authentication:** Firebase-powered login via Google, ensuring safety and ease.
+- **Trending System:** Real-time metrics based on reads and likes to showcase the best content.
+- **Responsive Design:** 100% mobile-first approach ensuring a flawless UI on every device.
 - **💬 Engagement System**: Robust backend schemas handling user comments, likes, and nested replies.
 - **🔍 Advanced Search**: Real-time blog searching and filtering capabilities.
 - **👨‍💻 Premium Developer Portfolio**: An integrated developer portfolio page showcasing the creator's profile, links, and expertise.
