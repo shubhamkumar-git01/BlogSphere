@@ -3,12 +3,13 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBZ7xYl9N9or1hwHYrjyMyYCVDS9euGsaM",
-  authDomain: "thynk-875.firebaseapp.com",
-  projectId: "thynk-875",
-  storageBucket: "thynk-875.firebasestorage.app",
-  messagingSenderId: "605085027412",
-  appId: "1:605085027412:web:7a85dd60889b3d7353b1c1"
+  apiKey: "AIzaSyB_w-921AX6oVgd-ISElyeiYZB52G4UiaM",
+  authDomain: "blogsphere-fc708.firebaseapp.com",
+  projectId: "blogsphere-fc708",
+  storageBucket: "blogsphere-fc708.firebasestorage.app",
+  messagingSenderId: "761069346595",
+  appId: "1:761069346595:web:a3915807ecbe28fc43f696",
+  measurementId: "G-1BTJBYX7R8"
 };
 
 

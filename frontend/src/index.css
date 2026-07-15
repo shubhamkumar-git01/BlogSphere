@@ -15,7 +15,7 @@
     }
 
     body {
-        @apply font-inter font-normal text-black;
+        @apply font-inter font-normal text-black dark:text-text-light dark:bg-dark-bg transition-colors duration-300;
     }
 
     i {
@@ -35,7 +35,7 @@
     }
 
     .navbar {
-        @apply z-10 sticky top-0 flex items-center gap-12 w-full px-[5vw] py-5 h-[80px] border-b border-grey bg-white;
+        @apply z-10 sticky top-0 flex items-center gap-12 w-full px-[5vw] py-5 h-[80px] border-b border-grey bg-white dark:bg-dark-bg dark:border-dark-card transition-colors duration-300;
     }
 
     .h-cover {
@@ -47,15 +47,15 @@
     }
 
     .btn-dark {
-        @apply whitespace-nowrap bg-black text-white rounded-full py-3 px-6 text-xl capitalize hover:bg-opacity-80;
+        @apply whitespace-nowrap bg-black text-white dark:bg-accent dark:text-black rounded-full py-3 px-6 text-xl capitalize hover:bg-opacity-80 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5;
     }
 
     .btn-light {
-        @apply btn-dark bg-grey text-black;
+        @apply btn-dark bg-grey text-black dark:bg-dark-card dark:text-text-light;
     }
 
     .input-box {
-        @apply w-[100%] rounded-md p-4 bg-grey pl-12 border border-grey focus:bg-transparent placeholder:text-black;
+        @apply w-[100%] rounded-md p-4 bg-grey dark:bg-dark-card dark:text-text-light pl-12 border border-grey dark:border-dark-grey focus:bg-transparent dark:focus:bg-transparent placeholder:text-black dark:placeholder:text-dark-grey transition-colors;
     }
 
     input:disabled,
@@ -68,7 +68,7 @@
     }
 
     .link {
-        @apply text-dark-grey hover:text-black hover:bg-grey p-3 px-4 block opacity-75;
+        @apply text-dark-grey dark:text-text-light hover:text-black dark:hover:text-white hover:bg-grey dark:hover:bg-dark-card p-3 px-4 block opacity-75 transition-colors;
     }
 
     .hide {
@@ -80,11 +80,11 @@
     }
 
     .sidebar-link {
-        @apply flex gap-4 items-center py-5 text-dark-grey hover:text-black;
+        @apply flex gap-4 items-center py-5 text-dark-grey dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors;
     }
 
     .sidebar-link.active {
-        @apply text-black border-r-2 border-black pl-6 bg-grey/50 -ml-6 md:rounded-tl-lg md:rounded-bl-lg max-md:border-none;
+        @apply text-black dark:text-accent border-r-2 border-black dark:border-accent pl-6 bg-grey/50 dark:bg-dark-card/50 -ml-6 md:rounded-tl-lg md:rounded-bl-lg max-md:border-none;
     }
 
     #textEditor h2,
@@ -99,24 +99,24 @@
 
     #textEditor *,
     .blog-page-content * {
-        @apply font-gelasio text-xl leading-10 md:text-2xl;
+        @apply font-gelasio text-xl leading-10 md:text-2xl dark:text-gray-300;
     }
 
     #textEditor a,
     .blog-page-content a {
-        @apply text-purple underline hover:opacity-50;
+        @apply text-purple dark:text-accent underline hover:opacity-50;
     }
 
     .tag {
-        @apply p-3 bg-grey rounded-full px-6 capitalize;
+        @apply p-3 bg-grey dark:bg-dark-card dark:text-gray-300 rounded-full px-6 capitalize transition-colors hover:bg-black hover:text-white dark:hover:bg-accent dark:hover:text-black;
     }
 
     .blog-title {
-        @apply text-2xl font-medium leading-7 line-clamp-3 sm:line-clamp-2;
+        @apply text-2xl font-medium leading-7 line-clamp-3 sm:line-clamp-2 dark:text-white;
     }
 
     .blog-index {
-        @apply text-4xl sm:text-3xl lg:text-5xl font-bold text-dark-grey leading-none;
+        @apply text-4xl sm:text-3xl lg:text-5xl font-bold text-dark-grey dark:text-gray-600 leading-none;
     }
 }
 
