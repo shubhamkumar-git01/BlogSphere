@@ -230,6 +230,61 @@ const HomePage = () => {
 
       </section>
 
+      {/* Features Section */}
+      <section className="py-20 px-4 md:px-[10vw] bg-white dark:bg-dark-bg transition-colors duration-300">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold dark:text-white mb-4">Why Write on BlogSphere?</h2>
+          <p className="text-xl text-dark-grey dark:text-text-light max-w-2xl mx-auto">Experience the ultimate platform for creators and thinkers.</p>
+        </motion.div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            { icon: "ri-quill-pen-line", title: "Premium Editor", desc: "A distraction-free, rich text editor that makes writing a joy." },
+            { icon: "ri-global-line", title: "Global Reach", desc: "Connect with a diverse audience of millions worldwide." },
+            { icon: "ri-bar-chart-box-line", title: "Detailed Analytics", desc: "Track your blog's performance with beautiful insights." }
+          ].map((feature, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.2 }}
+              className="p-8 rounded-2xl bg-grey dark:bg-dark-card hover:shadow-xl dark:hover:shadow-premium-dark transition-all hover:-translate-y-2 border border-transparent hover:border-black/10 dark:hover:border-white/10"
+            >
+              <div className="w-16 h-16 rounded-full bg-white dark:bg-dark-bg flex items-center justify-center text-3xl mb-6 shadow-sm dark:text-accent">
+                <i className={feature.icon}></i>
+              </div>
+              <h3 className="text-2xl font-bold mb-3 dark:text-white">{feature.title}</h3>
+              <p className="text-dark-grey dark:text-text-light">{feature.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Inspirational Quotes Section */}
+      <section className="py-16 px-4 md:px-[10vw] bg-grey dark:bg-black transition-colors duration-300 border-y border-black/5 dark:border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none"></div>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, type: "spring" }}
+          className="max-w-4xl mx-auto text-center relative z-10"
+        >
+          <i className="ri-double-quotes-l text-6xl text-purple/20 dark:text-accent/20 absolute -top-8 -left-4 md:-left-12"></i>
+          <h2 className="text-3xl md:text-5xl font-gelasio font-bold leading-relaxed dark:text-white italic">
+            "The art of writing is the art of discovering what you believe."
+          </h2>
+          <p className="mt-6 text-xl text-dark-grey dark:text-text-light font-medium">— Gustave Flaubert</p>
+        </motion.div>
+      </section>
+
       {/* Newsletter Section */}
       <section className="mt-20 py-16 px-4 md:px-[10vw] bg-black dark:bg-dark-card text-white text-center mx-4 md:mx-[5vw] shadow-2xl mb-10 transition-colors duration-300 rounded-3xl relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple/20 to-transparent dark:from-accent/10 opacity-50"></div>

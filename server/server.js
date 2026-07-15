@@ -21,7 +21,7 @@ if (process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
   serviceAccountKey = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
 } else {
   try {
-    serviceAccountKey = JSON.parse(fs.readFileSync("./thynk-875-firebase-adminsdk-fbsvc-5cbda0404e.json", "utf8"));
+    serviceAccountKey = JSON.parse(fs.readFileSync("./blogsphere-firebase-adminsdk.json", "utf8"));
   } catch (err) {
     console.log("Firebase credentials not found.");
   }

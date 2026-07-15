@@ -104,8 +104,8 @@ const UserAuthForm = ({ type }) => {
           <section className='h-cover flex items-center justify-center '>
             <Toaster />
             <form id="formElement" className='w-[80%] max-w-[400px]'>
-              <h1 className='text-4xl font-gelasio capitalize text-center mb-16'>
-                {type == "sign-in" ? "Welcome back" : "Join  us today"}
+              <h1 className='text-4xl font-gelasio capitalize text-center mb-16 dark:text-white transition-colors'>
+                {type == "sign-in" ? "Welcome back" : "Join us today"}
               </h1>
 
               {
@@ -141,13 +141,13 @@ const UserAuthForm = ({ type }) => {
                 {type.replace('-', " ")}
               </button>
 
-              <div className='relative w-full flex items-center gap-2 my-10 opacity-10 uppercase text-black font-bold'>
-                <hr className='w-1/2 border-black ' />
+              <div className='relative w-full flex items-center gap-2 my-10 opacity-50 dark:opacity-20 uppercase text-black dark:text-white font-bold transition-colors'>
+                <hr className='w-1/2 border-black dark:border-white' />
                 <p>or</p>
-                <hr className='w-1/2 border-black ' />
+                <hr className='w-1/2 border-black dark:border-white' />
               </div>
 
-              <button className='btn-dark w-[90%] flex items-center justify-center gap-4 center'
+              <button className='btn-dark w-[90%] flex items-center justify-center gap-4 center bg-[#1D9BF0] hover:bg-[#1D9BF0]/80 text-white dark:bg-white dark:text-black dark:hover:bg-white/90'
                 onClick={handleGoogleAuth}
               >
                 <i className="ri-google-fill text-3xl " ></i>
@@ -156,16 +156,16 @@ const UserAuthForm = ({ type }) => {
 
               {
                 type == "sign-in" ?
-                  <p className='mt-6 text-dark-grey text-xl text-center'>
+                  <p className='mt-6 text-dark-grey dark:text-text-light text-xl text-center transition-colors'>
                     Don't have an account ?
-                    <Link to="/signup" className='underline text-black text-xl ml-1'>
+                    <Link to="/signup" className='underline text-black dark:text-white text-xl ml-1 transition-colors'>
                       Join us today
                     </Link>
                   </p>
                   :
-                  <p className='mt-6 text-dark-grey text-xl text-center'>
+                  <p className='mt-6 text-dark-grey dark:text-text-light text-xl text-center transition-colors'>
                     Already a member ?
-                    <Link to="/signin" className='underline text-black text-xl ml-1'>
+                    <Link to="/signin" className='underline text-black dark:text-white text-xl ml-1 transition-colors'>
                       Sign in here.
                     </Link>
                   </p>

@@ -17,7 +17,7 @@ const AboutDeveloper = () => {
                         <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
                     </div>
                     
-                    <div className="flex flex-col items-center -mt-20 px-8 pb-10">
+                    <div className="flex flex-col items-center -mt-20 px-8 pb-10 relative z-10">
                         <motion.div 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -42,13 +42,13 @@ const AboutDeveloper = () => {
                         </p>
 
                         <div className="flex gap-6 mt-8">
-                            <a href="https://github.com/shubhamkumar-git01" target="_blank" className="w-12 h-12 rounded-full bg-grey dark:bg-black flex items-center justify-center hover:bg-black hover:text-white dark:hover:bg-accent dark:hover:text-black dark:text-white transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <a href="https://github.com/shubhamkumar-git01" target="_blank" className="w-12 h-12 rounded-full bg-grey dark:bg-black flex items-center justify-center hover:bg-black hover:text-white dark:hover:bg-accent dark:hover:text-black dark:text-white transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1 relative z-20">
                                 <Github size={24} />
                             </a>
-                            <a href="https://www.linkedin.com/in/shubham-kumar-sk01/" target="_blank" className="w-12 h-12 rounded-full bg-grey dark:bg-black flex items-center justify-center hover:bg-[#0A66C2] hover:text-white dark:text-white transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <a href="https://www.linkedin.com/in/shubham-kumar-sk01/" target="_blank" className="w-12 h-12 rounded-full bg-grey dark:bg-black flex items-center justify-center hover:bg-[#0A66C2] hover:text-white dark:text-white transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1 relative z-20">
                                 <Linkedin size={24} />
                             </a>
-                            <a href="mailto:shubham.kumar.cse27@gmail.com" className="w-12 h-12 rounded-full bg-grey dark:bg-black flex items-center justify-center hover:bg-[#EA4335] hover:text-white dark:text-white transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <a href="mailto:shubham.kumar.cse27@gmail.com" className="w-12 h-12 rounded-full bg-grey dark:bg-black flex items-center justify-center hover:bg-[#EA4335] hover:text-white dark:text-white transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1 relative z-20">
                                 <Mail size={24} />
                             </a>
                         </div>
