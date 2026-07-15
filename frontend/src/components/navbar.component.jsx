@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from "../imgs/black.svg"
+import logo from "../imgs/blogsphere-logo.jpg"
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
 import { NotebookPen } from "lucide-react";
@@ -61,6 +61,10 @@ const Navbar = () => {
           >
             <Search />
           </button>
+
+          <Link to="/about" className='hidden md:flex gap-2 link ml-4 mr-4 hover:text-black transition-colors'>
+            <p>About Developer</p>
+          </Link>
 
           <Link to="/editor" className='hidden md:flex gap-2 link'>
             <NotebookPen />

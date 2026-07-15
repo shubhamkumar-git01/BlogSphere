@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../imgs/black.svg";
+import logo from "../imgs/blogsphere-logo.jpg";
 import AnimationWrapper from "../common/page-animation";
 import defaultBanner from "../imgs/blog banner.png";
 import { uploadImage } from "../common/aws";

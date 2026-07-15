@@ -1,6 +1,6 @@
 import React from 'react'
 import pageNotFoundImage from '../imgs/errorMessage.jpg'
-import Logo from "../imgs/black.svg";
+import Logo from "../imgs/blogsphere-logo.jpg";
 
 const PageNotFound = () => {
   return (
