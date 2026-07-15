@@ -134,7 +134,7 @@ const HomePage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-6xl font-bold text-black dark:text-white leading-tight mb-6 transition-colors"
           >
-            Discover the <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-blue-700 dark:from-accent dark:to-purple font-extrabold">Future</span> of Blogging
+            Discover the <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple to-twitter dark:from-accent dark:to-purple font-extrabold inline-block">Future</span> of Blogging
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
