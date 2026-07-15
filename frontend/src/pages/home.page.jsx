@@ -140,9 +140,9 @@ const HomePage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-dark-grey dark:text-text-light mb-8 max-w-xl mx-auto md:mx-0 transition-colors drop-shadow-sm dark:drop-shadow-md"
+            className="text-xl text-dark-grey dark:text-text-light/90 mb-8 max-w-2xl mx-auto md:mx-0 transition-colors drop-shadow-sm dark:drop-shadow-md leading-relaxed font-medium"
           >
-            Dive into premium content spanning tech, finance, lifestyle, and more. Written by experts, crafted for you.
+            Immerse yourself in a world of ideas. Discover powerful stories, expert insights, and inspiring perspectives from a global community of thinkers and creators.
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -258,8 +258,8 @@ const HomePage = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold dark:text-white mb-4">Why Write on BlogSphere?</h2>
-          <p className="text-xl text-dark-grey dark:text-text-light max-w-2xl mx-auto">Experience the ultimate platform for creators and thinkers.</p>
+          <h2 className="text-4xl md:text-5xl font-bold dark:text-white mb-5 tracking-tight">Why Write on BlogSphere?</h2>
+          <p className="text-xl text-dark-grey dark:text-text-light/80 max-w-3xl mx-auto leading-relaxed">Join a vibrant ecosystem where your voice truly matters. We provide the perfect canvas, you bring the masterpiece.</p>
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 perspective-1000">
