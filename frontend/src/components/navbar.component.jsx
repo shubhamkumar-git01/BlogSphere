@@ -52,11 +52,11 @@ const Navbar = () => {
           <input
             type="text"
             placeholder='Search'
-            className='w-full md:w-auto bg-grey dark:bg-dark-card dark:text-text-light p-4 pl-6 pr-[12%] rounded-full placeholder:text-dark-grey md:pl-14 transition-colors focus:ring-2 focus:ring-accent outline-none'
+            className='w-full md:w-auto bg-grey dark:bg-white/5 border border-transparent dark:border-white/10 dark:text-white p-4 pl-6 pr-[12%] rounded-full placeholder:text-dark-grey dark:placeholder:text-white/40 md:pl-14 transition-colors focus:ring-2 focus:ring-accent outline-none'
             onKeyDown={handleSearch}
           />
 
-          <Search className='absolute right-[10%] md:pointer-events-none md:left-5 top-1/2 -translate-y-1/2 text-dark-grey' />
+          <Search className='absolute right-[10%] md:pointer-events-none md:left-5 top-1/2 -translate-y-1/2 text-dark-grey dark:text-white/40' />
         </div>
 
         <div className='flex items-center gap-6 md:gap-6 ml-auto'>

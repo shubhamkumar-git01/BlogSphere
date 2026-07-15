@@ -288,23 +288,41 @@ const HomePage = () => {
       </section>
 
       {/* Inspirational Quotes Section */}
-      <section className="py-20 px-4 md:px-[10vw] bg-grey dark:bg-black transition-colors duration-300 border-y border-black/5 dark:border-white/5 relative overflow-hidden">
+      <section className="py-24 px-4 md:px-[10vw] bg-grey dark:bg-black transition-colors duration-300 border-y border-black/5 dark:border-white/5 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] dark:opacity-20 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none"></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none mix-blend-screen"></div>
-        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl pointer-events-none mix-blend-screen"></div>
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.90 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, type: "spring", bounce: 0.4 }}
-          className="max-w-4xl mx-auto text-center relative z-10 p-10 bg-white/50 dark:bg-dark-card/50 backdrop-blur-md rounded-3xl shadow-xl border border-white/20 dark:border-dark-grey/50"
-        >
-          <i className="ri-double-quotes-l text-7xl text-purple/30 dark:text-accent/30 absolute -top-6 -left-6 md:-left-10 drop-shadow-md"></i>
-          <h2 className="text-3xl md:text-5xl font-gelasio font-bold leading-relaxed text-black dark:text-white italic">
-            "The art of writing is the art of discovering what you believe."
-          </h2>
-          <p className="mt-8 text-xl text-dark-grey dark:text-accent font-semibold tracking-wider uppercase">— Gustave Flaubert</p>
-        </motion.div>
+        <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none mix-blend-screen -translate-y-1/2 -translate-x-1/2"></div>
+        <div className="absolute top-1/2 right-0 w-96 h-96 bg-purple/10 rounded-full blur-3xl pointer-events-none mix-blend-screen -translate-y-1/2 translate-x-1/2"></div>
+        
+        <div className="text-center mb-16 relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold dark:text-white mb-4">Words to Inspire</h2>
+          <p className="text-lg text-dark-grey dark:text-text-light max-w-2xl mx-auto">Because every great idea starts with a single sentence.</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto relative z-10 perspective-1000">
+          {[
+            { quote: "The art of writing is the art of discovering what you believe.", author: "Gustave Flaubert", delay: 0 },
+            { quote: "Either write something worth reading or do something worth writing.", author: "Benjamin Franklin", delay: 0.2 },
+          ].map((q, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, scale: 0.90 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: q.delay, type: "spring", bounce: 0.4 }}
+              whileHover={{ scale: 1.03, rotateY: i === 0 ? 3 : -3, z: 20 }}
+              className="p-10 bg-white/60 dark:bg-dark-card/60 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl dark:shadow-black/50 border border-white/40 dark:border-white/10 relative transform-style-3d cursor-default"
+            >
+              <i className="ri-double-quotes-l text-6xl text-purple/20 dark:text-accent/20 absolute -top-4 -left-4"></i>
+              <h3 className="text-2xl md:text-3xl font-gelasio font-bold leading-relaxed text-black dark:text-white italic relative z-10">
+                "{q.quote}"
+              </h3>
+              <p className="mt-8 text-lg text-dark-grey dark:text-accent font-semibold tracking-wider uppercase flex items-center gap-2">
+                <span className="w-8 h-px bg-dark-grey dark:bg-accent inline-block"></span>
+                {q.author}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </section>
 
       {/* Newsletter Section */}
