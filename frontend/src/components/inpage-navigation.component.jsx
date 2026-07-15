@@ -27,14 +27,14 @@ const InPageNavigation = ({ routes,defaultHidden = [] ,defaultActiveIndex = 0,ch
 
   return (
     <>
-      <div className='relative mb-8 bg-white border-b border-grey flex flex-nowrap overflow-x-auto'>
+      <div className='relative mb-8 bg-white dark:bg-dark-bg border-b border-grey dark:border-dark-grey flex flex-nowrap overflow-x-auto transition-colors duration-300'>
         {
           routes.map((route, i) => {
             return (
               <button
                 ref={i == defaultActiveIndex ? activeTabRef: null }
                 key={i}
-                className={"p-4 px-5 capitalize " + (inPageNavIndex == i ? "text-black" : "text-dark-grey ") + (defaultHidden .includes(route) ? "md:hidden ":" ")}
+                className={"p-4 px-5 capitalize transition-all duration-300 hover:bg-grey/50 dark:hover:bg-dark-card/30 rounded-t-xl " + (inPageNavIndex == i ? "text-black dark:text-white font-bold" : "text-dark-grey dark:text-text-light/60 font-medium ") + (defaultHidden .includes(route) ? "md:hidden ":" ")}
                 onClick={(e)=>{changePageState(e.target, i)}}
               >
               {route}
@@ -43,7 +43,7 @@ const InPageNavigation = ({ routes,defaultHidden = [] ,defaultActiveIndex = 0,ch
           })
         }
 
-        <hr ref={ activeTabLineRef} className='absolute bottom-0 duration-300' />
+        <hr ref={ activeTabLineRef} className='absolute bottom-0 border-purple dark:border-accent border-2 rounded-t-md transition-all duration-300 ease-out' />
 
 
       </div>
