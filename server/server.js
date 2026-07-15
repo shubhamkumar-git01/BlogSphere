@@ -16,14 +16,25 @@ import Blog from "./Schema/Blog.js";
 import Notification from "./Schema/Notification.js";
 import Comment from "./Schema/Comment.js";
 
-const serviceAccountKey = JSON.parse(fs.readFileSync("./thynk-875-firebase-adminsdk-fbsvc-5cbda0404e.json", "utf8"))
+let serviceAccountKey;
+if (process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
+  serviceAccountKey = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY);
+} else {
+  try {
+    serviceAccountKey = JSON.parse(fs.readFileSync("./thynk-875-firebase-adminsdk-fbsvc-5cbda0404e.json", "utf8"));
+  } catch (err) {
+    console.log("Firebase credentials not found.");
+  }
+}
 
 const server = express();
-let PORT = 3000
+let PORT = process.env.PORT || 3000
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccountKey)
-})
+if (serviceAccountKey) {
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccountKey)
+  })
+}
 
 let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // regex for email
 let passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/; // regex for password
