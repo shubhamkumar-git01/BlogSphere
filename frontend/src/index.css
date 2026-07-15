@@ -80,7 +80,7 @@
     }
 
     .sidebar-link {
-        @apply flex gap-4 items-center py-5 text-dark-grey dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors;
+        @apply flex gap-4 items-center py-5 text-dark-grey dark:text-text-light hover:text-black dark:hover:text-white transition-colors;
     }
 
     .sidebar-link.active {
@@ -99,7 +99,7 @@
 
     #textEditor *,
     .blog-page-content * {
-        @apply font-gelasio text-xl leading-10 md:text-2xl dark:text-gray-300;
+        @apply font-gelasio text-xl leading-10 md:text-2xl dark:text-text-light;
     }
 
     #textEditor a,
@@ -108,7 +108,7 @@
     }
 
     .tag {
-        @apply p-3 bg-grey dark:bg-dark-card dark:text-gray-300 rounded-full px-6 capitalize transition-colors hover:bg-black hover:text-white dark:hover:bg-accent dark:hover:text-black;
+        @apply p-3 bg-grey dark:bg-dark-card dark:text-text-light rounded-full px-6 capitalize transition-colors hover:bg-black hover:text-white dark:hover:bg-accent dark:hover:text-black;
     }
 
     .blog-title {
@@ -116,7 +116,7 @@
     }
 
     .blog-index {
-        @apply text-4xl sm:text-3xl lg:text-5xl font-bold text-dark-grey dark:text-gray-600 leading-none;
+        @apply text-4xl sm:text-3xl lg:text-5xl font-bold text-dark-grey dark:text-grey leading-none;
     }
 }
 
