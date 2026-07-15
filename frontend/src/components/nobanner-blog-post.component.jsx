@@ -12,7 +12,7 @@ const MinimalBlogPost = ({ blog, index }) => {
       <h1 className='blog-index opacity-30'>{index < 10 ? "0"+ (index + 1) : index}</h1>
 
       <div>
-        <div className='flex gap-2 items-center mb-4'>
+        <div className='flex gap-2 items-center mb-4 dark:text-text-light'>
           <img src={profile_img} className='w-6 h-6 rounded-full' />
           <p className='line-clamp-1'>{fullname} @{username}</p>
           <p className='min-w-fit'>{getDay(publishedAt) }</p>

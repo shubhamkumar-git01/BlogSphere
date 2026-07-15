@@ -116,23 +116,39 @@ const HomePage = () => {
   return (
     <AnimationWrapper>
       {/* Hero Section */}
-      <section className="w-full bg-grey dark:bg-black py-16 px-4 md:px-[10vw] flex flex-col md:flex-row items-center gap-10 rounded-b-3xl shadow-premium dark:shadow-premium-dark relative overflow-hidden transition-colors duration-300">
-        <div className="absolute inset-0 opacity-10 dark:opacity-20 bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+      <section className="w-full bg-grey dark:bg-black py-20 px-4 md:px-[10vw] flex flex-col md:flex-row items-center gap-10 rounded-b-3xl shadow-premium dark:shadow-premium-dark relative overflow-hidden transition-colors duration-300">
+        <div className="absolute inset-0 opacity-10 dark:opacity-20 bg-[url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] bg-cover bg-fixed bg-center"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-purple/20 dark:bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
         <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="z-10 text-center md:text-left flex-1 py-10"
+            className="z-10 text-center md:text-left flex-1 py-10 relative"
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-black dark:text-white leading-tight mb-4 transition-colors">
-            Discover the <span className="text-purple dark:text-accent">Future</span> of Blogging
-          </h1>
-          <p className="text-xl text-dark-grey dark:text-text-light mb-8 max-w-xl mx-auto md:mx-0 transition-colors">
+          <motion.h1 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-6xl font-bold text-black dark:text-white leading-tight mb-6 transition-colors"
+          >
+            Discover the <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple to-blue-500 dark:from-accent dark:to-purple">Future</span> of Blogging
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-xl text-dark-grey dark:text-text-light mb-8 max-w-xl mx-auto md:mx-0 transition-colors"
+          >
             Dive into premium content spanning tech, finance, lifestyle, and more. Written by experts, crafted for you.
-          </p>
-          <div className="flex gap-4 justify-center md:justify-start">
-            <button className="btn-dark px-8 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transition-all" onClick={() => activeTabRef.current.click()}>Start Reading</button>
-          </div>
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex gap-4 justify-center md:justify-start"
+          >
+            <button className="btn-dark px-8 py-4 rounded-full font-bold shadow-lg shadow-purple/20 dark:shadow-accent/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300" onClick={() => activeTabRef.current.click()}>Start Reading</button>
+          </motion.div>
         </motion.div>
       </section>
 

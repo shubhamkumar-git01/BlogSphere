@@ -55,7 +55,7 @@
     }
 
     .input-box {
-        @apply w-[100%] rounded-md p-4 bg-grey dark:bg-dark-card dark:text-text-light pl-12 border border-grey dark:border-dark-grey focus:bg-transparent dark:focus:bg-transparent placeholder:text-black dark:placeholder:text-dark-grey transition-colors;
+        @apply w-[100%] rounded-md p-4 bg-grey dark:bg-dark-card dark:text-white pl-12 border border-grey dark:border-dark-grey focus:bg-transparent dark:focus:bg-transparent placeholder:text-dark-grey dark:placeholder:text-grey transition-colors;
     }
 
     input:disabled,

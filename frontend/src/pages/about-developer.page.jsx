@@ -27,7 +27,7 @@ const AboutDeveloper = () => {
                             <img 
                                 src="/profile.jpg" 
                                 alt="Shubham Kumar" 
-                                className="w-full h-full rounded-full bg-grey dark:bg-black object-cover"
+                                className="w-full h-full rounded-full bg-grey dark:bg-black object-cover object-top"
                             />
                         </motion.div>
 
