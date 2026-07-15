@@ -9,7 +9,7 @@
   <p align="center"><b>An Ultra-Premium, Full-Stack Blogging Platform Engineered for Speed, Security, and Aesthetics.</b></p>
   
   <p align="center">
-    <a href="https://blogsphere-flame.vercel.app/" target="_blank">
+    <a href="https://blog-sphere-sandy-eight.vercel.app/" target="_blank">
       <img src="https://img.shields.io/badge/🔴_Live_Demo-Visit_Website-FF4E4E?style=for-the-badge" alt="Live Demo" />
     </a>
   </p>
